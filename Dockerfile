@@ -14,4 +14,5 @@ WORKDIR /usr/apps/kafka
 
 # Arranque de la aplicacion
 # CMD ["/scripts/arranqueConsumidor.sh"]
-ENTRYPOINT exec /usr/apps/kafka/arranqueConsumidor.sh
+# ENTRYPOINT exec /usr/apps/kafka/arranqueConsumidor.sh
+ENTRYPOINT ["sh", "/usr/apps/kafka/arranqueConsumidor.sh"]

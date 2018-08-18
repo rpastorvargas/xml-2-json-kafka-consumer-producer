@@ -18,9 +18,7 @@ COPY arranqueConsumidor.sh  /usr/apps/kafka
 WORKDIR /usr/apps/kafka
 
 # Arranque de la aplicacion
-# CMD ["/scripts/arranqueConsumidor.sh"]
-#ENTRYPOINT exec /usr/apps/kafka/arranqueConsumidor.sh
 #ENTRYPOINT ["sh", "/usr/apps/kafka/arranqueConsumidor.sh"]
-ENTRYPOINT ["sh", "/usr/apps/kafka/wait-for", "kafka:9092", "-s", "10", "-t", "120", "--", "/usr/apps/kafka/arranqueConsumidor.sh"]
-#ENTRYPOINT exec /usr/apps/kafka/wait-for kafka:9092 -s 10 -t 120 -- /usr/apps/kafka/arranqueConsumidor.sh
+ENTRYPOINT ["sh", "/usr/apps/kafka/wait-for", "kafka:9092", "-s", "10", "-t", "120", "--", "sh", "/usr/apps/kafka/arranqueConsumidor.sh"]
+
 

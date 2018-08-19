@@ -20,5 +20,3 @@ WORKDIR /usr/apps/kafka
 # Arranque de la aplicacion
 #ENTRYPOINT ["sh", "/usr/apps/kafka/arranqueConsumidor.sh"]
 ENTRYPOINT ["sh", "/usr/apps/kafka/wait-for", "kafka:9092", "-s", "10", "-t", "120", "--", "sh", "/usr/apps/kafka/arranqueConsumidor.sh"]
-
-

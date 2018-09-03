@@ -1,1 +1,1 @@
-java -cp "$CLASSPATH:.:/usr/apps/kafka/dependencias/*:/usr/apps/kafka/EventosKafka.jar" es.ceura.masterBigData.tfm.kafka.ConversorXML2JSONKafka kafka 9092
+java -cp "$CLASSPATH:.:/usr/apps/kafka/dependencias/*:/usr/apps/kafka/EventosKafka.jar" es.ceura.masterBigData.tfm.kafka.ConversorXML2JSONKafka
